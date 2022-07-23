@@ -25,7 +25,10 @@ I'll be releasing an easier-to-use web app soon. This version is for
 1. You'll need oauth credentials for the downloadable version of this app. You can get those by creating a project at https://console.cloud.google.com/. 
 2. Once you've created the project, go to https://console.cloud.google.com/apis/dashboard and enable access for the Google Search Console and Google Sheets APIs.
 3. Finally, create an OAuth client ID at https://console.cloud.google.com/apis/credentials (for a Desktop app) and download the json file of the credentials.
-4. Near the top of the code are two parameters: oauth_file and site. The oauth_file should 
+4. Near the top of the code are two parameters: oauth_file and site. The oauth_file should point to the file you just downloaded and the site needs to specify your domain as described in the code comments.
+5. Run the code with `python gsc_graph_gen.py`. A browser window will open asking you to sign in with your Google account. This is using your own API access, as you can verify in the code, so your data is entirely safe.
+
+When the code finishes, your Google sheet will be ready to view.
 
 ## Output
 The final output is created in your Google Sheets account as "GSC graphs - pages". 
