@@ -131,7 +131,7 @@ sh.worksheet_by_title('impressions').set_dataframe(merged_gsc_df.head(1000),(1,2
 
 merged_gsc_df = pd.merge(
     gsc_page_date_df.groupby('page').sum()[['clicks','impressions']],
-    gsc_page_date_df.pivot('page','date','position').fillna('0').reset_index(), 
+    gsc_page_date_df.pivot('page','date','position').fillna('100').reset_index(), 
     on='page'
 ).sort_values('clicks',ascending=False)
 
